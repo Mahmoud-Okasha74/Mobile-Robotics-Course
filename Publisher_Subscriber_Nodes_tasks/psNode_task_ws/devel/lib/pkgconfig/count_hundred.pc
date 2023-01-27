@@ -1,0 +1,8 @@
+prefix=/home/okasha/psNode_task_ws/devel
+
+Name: count_hundred
+Description: Description of count_hundred
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
