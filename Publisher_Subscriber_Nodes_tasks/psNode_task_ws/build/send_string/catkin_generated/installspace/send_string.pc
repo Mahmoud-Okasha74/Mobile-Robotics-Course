@@ -1,8 +1,0 @@
-prefix=/home/okasha/psNode_task_ws/install
-
-Name: send_string
-Description: Description of send_string
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
