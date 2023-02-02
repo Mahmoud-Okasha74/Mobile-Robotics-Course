@@ -1,2 +1,0 @@
-count_hundred:cpp_count_hundred:cpp_send_string:send_string
--DCATKIN_DEVEL_PREFIX=/home/okasha/psNode_task_ws/devel -DCMAKE_INSTALL_PREFIX=/home/okasha/psNode_task_ws/install -G Unix Makefiles
