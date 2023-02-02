@@ -1,5 +1,0 @@
-The Tasks: 
-
-- write, publisher and subscriber to start count from 100 until the user uses CTRL C, (.py, .cpp).
-
-- write, publisher and subscriber using String msg("I am Learning Robotics and ROS") until the user uses CTRL C, (.py, .cpp).

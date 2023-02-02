@@ -1,8 +1,0 @@
-prefix=/home/okasha/psNode_task_ws/devel
-
-Name: sendString
-Description: Description of sendString
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
