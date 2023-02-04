@@ -1,0 +1,3 @@
+<launch>
+<node pkg="robot_age_pkg" type="robot_age_publisher.py" name="robot_age_publisher_node" output="screen" />
+</launch>

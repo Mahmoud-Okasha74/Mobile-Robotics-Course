@@ -1,0 +1,4 @@
+<launch>
+<node pkg="msgs_task1" type="simple_topic_publisher.py" name="topicPublisher"
+output="screen" />
+</launch>
