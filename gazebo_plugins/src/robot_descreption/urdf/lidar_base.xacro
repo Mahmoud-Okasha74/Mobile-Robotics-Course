@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:include filename="inertial_macros.xacro"/>
+    <material name="yellow">
+        <color rgba="100.0 300.0 0.0 0.7"/>
+    </material>
+    <xacro:macro name="lidar_base_link" params="name">
+        <link name="${name}">
+            <visual name="${name}_visual">
+                <origin xyz="0.0 0.0 0.6" rpy="0.0 0.0 0.0"/>
+                <geometry>
+                    <box size="0.4 0.4 0.3"/>
+                </geometry>
+                <material name="yellow"/>
+            </visual>
+            <collision>
+                <origin xyz="0.0 0.0 0.6" rpy="0.0 0.0 0.0"/>
+                <geometry>
+                    <box size="0.4 0.4 0.3"/>
+                </geometry>
+            </collision>
+            <xacro:inertial_box mass="0.25" x="0.4" y="0.4" z="0.3">
+                <origin xyz="0.0 0.0 0.6" rpy="0.0 0.0 0.0"/>
+            </xacro:inertial_box>
+        </link>
+    </xacro:macro>
+</robot>
