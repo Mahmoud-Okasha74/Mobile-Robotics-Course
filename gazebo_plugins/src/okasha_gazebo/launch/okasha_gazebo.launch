@@ -7,7 +7,7 @@
     <arg name="headless" default="false"/>
     <arg name="debug" default="false"/>
     <!--world-->
-    <arg name="world_name" default="$(find gazebo_robot)/worlds/robot_world.world"/>
+    <arg name="world_name" default="$(find okasha_gazebo)/world/okasha_world"/>
     <include file="$(find gazebo_ros)/launch/empty_world.launch">
         <arg name="world_name" value="$(arg world_name)"/>
         <arg name="paused" value="$(arg paused)"/>
@@ -16,7 +16,7 @@
         <arg name="headless" value="$(arg headless)"/>
         <arg name="debug" value="$(arg debug)"/>
     </include>
-    <param name="robot_description" command="$(find xacro)/xacro $(find robot_descreption)/urdf/okasha_robot.xacro"/>
+    <param name="robot_description" command="$(find xacro)/xacro $(find okasha_descreption)/urdf/okasha_robot.xacro"/>
     <node args="-param robot_descreption -urdf -model okasha" name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"/>
    
     <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
