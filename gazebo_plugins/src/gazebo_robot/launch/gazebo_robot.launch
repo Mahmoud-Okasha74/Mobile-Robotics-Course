@@ -16,11 +16,11 @@
         <arg name="headless" value="$(arg headless)"/>
         <arg name="debug" value="$(arg debug)"/>
     </include>
-    <param command="$(find xacro)/xacro $(find robot_descreption)/urdf/okasha_robot.xacro" name="robot_descreption"/>
-    <node args="-param robot_descreption -urdf -model okasha_robot" name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"/>
-
+    <param name="robot_description" command="$(find xacro)/xacro $(find robot_descreption)/urdf/okasha_robot.xacro"/>
+    <node args="-param robot_descreption -urdf -model okasha" name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"/>
+   
     <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
-        <param name="use_gui" value="false"/>
+        <param name="use_gui" value="True"/>
     </node>
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen"/>
     <node name="rviz" pkg="rviz" type="rviz" />

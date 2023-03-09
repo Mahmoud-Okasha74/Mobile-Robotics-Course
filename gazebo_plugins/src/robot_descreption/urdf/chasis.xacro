@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
     <xacro:include filename="inertial_macros.xacro"/>
-    <material name="yellow">
-        <color rgba="100.0 300.0 0.0 0.7"/>
+    <material name="cyellow">
+        <color rgba="0.7 0.88 0.0 1.0"/>
     </material>
     <xacro:macro name="chasis_link" params="name">
         <link name="${name}">
@@ -11,7 +11,7 @@
                 <geometry>
                     <box size="2.0 1.0 0.3"/>
                 </geometry>
-                <material name="yellow"/>
+                <material name="cyellow"/>
             </visual>
             <collision>
                 <origin xyz="0.0 0.0 0.4" rpy="0.0 0.0 0.0"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="okasha_robot">
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="okasha">
     <xacro:include filename="inertial_macros.xacro"/>
     <xacro:include filename="chasis.xacro"/>
     <xacro:include filename="wheel.xacro"/>
@@ -15,7 +15,12 @@
     <xacro:wheel_link name="wheel_two"/>
     <xacro:wheel_link name="wheel_three"/>
     <xacro:wheel_link name="wheel_four"/>
-
+    <link name="dummy">
+    </link>
+    <joint name="dummy_joint" type="fixed">
+        <parent link="dummy"/>
+        <child link="chasis"/>
+    </joint>
     <joint name="chasis_camera" type="fixed">
         <parent link="chasis"/>
         <child link="camera"/>
