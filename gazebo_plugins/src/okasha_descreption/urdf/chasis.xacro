@@ -9,19 +9,21 @@
             <visual name="${name}_visual">
                 <origin xyz="0.0 0.0 0.4" rpy="0.0 0.0 0.0"/>
                 <geometry>
-                    <box size="2.0 1.0 0.3"/>
+                    <box size="2.0 1.0 0.5"/>
                 </geometry>
                 <material name="cyellow"/>
             </visual>
             <collision>
                 <origin xyz="0.0 0.0 0.4" rpy="0.0 0.0 0.0"/>
                 <geometry>
-                    <box size="2.0 1.0 0.3"/>
+                    <box size="2.0 1.0 0.5"/>
                 </geometry>
             </collision>
-            <xacro:inertial_box mass="20" x="2.0" y="1.0" z="0.3">
-                <origin xyz="0.0 0.0 0.4" rpy="0.0 0.0 0.0"/>
-            </xacro:inertial_box>
+            <inertial>
+		    <origin xyz="0.0 0.0 0.0"/>
+		    <mass value="35"/>
+		    <inertia ixx="0.1" ixy="0.0" ixz="0.0" iyy="0.1" iyz="0.0" izz="0.1"/>
+		</inertial>
         </link>
     </xacro:macro>
 

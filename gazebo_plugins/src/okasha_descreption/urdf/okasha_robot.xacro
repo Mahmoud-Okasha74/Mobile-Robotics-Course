@@ -5,61 +5,52 @@
     <xacro:include filename="wheel.xacro"/>
     <xacro:include filename="lidar.xacro"/>
     <xacro:include filename="camera.xacro"/>
-    <xacro:include filename="lidar_base.xacro"/>
+    <!--xacro:include filename="lidar_base.xacro"/-->
+    <xacro:include filename="okasha_robot.gazebo"/>
 
     <xacro:camera_link name="camera"/>
     <xacro:chasis_link name="chasis"/>
-    <xacro:lidar_base_link name= "lidar_base"/>
+    <!--xacro:lidar_base_link name= "lidar_base"/-->
     <xacro:lidar_link name="lidar"/>
     <xacro:wheel_link name="wheel_one"/>
     <xacro:wheel_link name="wheel_two"/>
     <xacro:wheel_link name="wheel_three"/>
     <xacro:wheel_link name="wheel_four"/>
-    <link name="dummy">
-    </link>
-    <joint name="dummy_joint" type="fixed">
-        <parent link="dummy"/>
-        <child link="chasis"/>
-    </joint>
-    <joint name="chasis_camera" type="fixed">
-        <parent link="chasis"/>
-        <child link="camera"/>
-        <origin xyz="1.05 0.0 -0.1" rpy="0.0 0.0 0.0"/>
-    </joint>
-    <joint name="chasis_lidar_base" type="fixed">
-        <parent link="chasis"/>
-        <child link="lidar_base"/>
-        <origin xyz="0.0 0.0 0.1" rpy="0.0 0.0 0.0"/>
-    </joint>
-    <joint name="lidar_base_lidar" type="fixed">
-        <parent link="lidar_base"/>
-        <child link="lidar"/>
-        <origin xyz="0.0 0.0 0.2" rpy="0.0 0.0 0.0"/>
-    </joint>
-    <joint name="chasis_wheel_one" type="continuous">
+
+     <joint name="chasis_wheel_one" type="continuous">
         <parent link="chasis"/>
         <child link="wheel_one"/>
         <axis xyz="0.0 1.0 0.0"/>
-        <origin xyz="0.5 0.6 0" rpy="0 0 0"/>
+        <origin xyz="0.5 0.6 0.3" rpy="0 0 0"/>
     </joint>
     <joint name="chasis_wheel_two" type="continuous">
         <parent link="chasis"/>
         <child link="wheel_two"/>
         <axis xyz="0.0 1.0 0.0"/>
-        <origin xyz="0.5 -0.6 0" rpy="0 0 0"/>
+        <origin xyz="0.5 -0.6 0.3" rpy="0 0 0"/>
     </joint>
     <joint name="chasis_wheel_three" type="continuous">
         <parent link="chasis"/>
         <child link="wheel_three"/>
         <axis xyz="0.0 1.0 0.0"/>
-        <origin xyz="-0.5 0.6 0" rpy="0 0 0"/>
+        <origin xyz="-0.5 0.6 0.3" rpy="0 0 0"/>
     </joint>
     <joint name="chasis_wheel_four" type="continuous">
         <parent link="chasis"/>
         <child link="wheel_four"/>
         <axis xyz="0.0 1.0 0.0"/>
-        <origin xyz="-0.5 -0.6 0" rpy="0 0 0"/>
+        <origin xyz="-0.5 -0.6 0.3" rpy="0 0 0"/>
     </joint>
-
+    <joint name="chasis_camera" type="fixed">
+        <parent link="chasis"/>
+        <child link="camera"/>
+        <origin xyz="1.05 0.0 0.45" rpy="0.0 0.0 0.0"/>
+    </joint>
+    <joint name="chasis_lidar" type="fixed">
+        <parent link="chasis"/>
+        <child link="lidar"/>
+        <origin xyz="0.0 0.0 0.68" rpy="0.0 0.0 0.0"/>
+    </joint>
+    
     
 </robot>

@@ -7,21 +7,23 @@
     <xacro:macro name="lidar_link" params="name">
         <link name="${name}">
             <visual name="${name}_visual">
-                <origin xyz="0.0 0.0 0.6" rpy="0.0 0.0 0.0"/>
+                <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
                 <geometry>
-                    <cylinder radius="0.1" length="0.1"/>
+                    <mesh filename="package://okasha_descreption/mesh/rplidar.dae"/>
                 </geometry>
-                <material name="green"/>
+
             </visual>
             <collision>
-                <origin xyz="0.0 0.0 0.6" rpy="0.0 0.0 0.0"/>
+                <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
                 <geometry>
-                    <cylinder radius="0.1" length="0.1"/>
+                    <mesh filename="package://okasha_descreption/mesh/rplidar.dae"/>
                 </geometry>
             </collision>
-            <xacro:inertial_cylinder mass="0.7" length="0.1" radius="0.1">
-                <origin xyz="0.0 0.0 0.6" rpy="0.0 0.0 0.0"/>
-            </xacro:inertial_cylinder>
+            <inertial>
+		<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		<mass value="0.9"/>
+		<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+	    </inertial>
         </link>
     </xacro:macro>
 </robot>
